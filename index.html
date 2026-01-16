@@ -27,8 +27,9 @@
             left: 0;
             width: 100%;
             height: 300px;
-            background: linear-gradient(180deg, transparent 0%, #001e3c 50%, #00152a 100%);
+            background: transparent;
             overflow: hidden;
+            display: none;
         }
 
         .wave {
@@ -66,8 +67,9 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 180px;
-            opacity: 0.15;
+            opacity: 0;
             filter: blur(2px);
+            display: none;
         }
 
         .container {
@@ -83,51 +85,71 @@
 
         .countdown {
             display: flex;
-            gap: 100px;
+            gap: 80px;
             margin-bottom: 60px;
+            padding: 60px 100px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .time-unit {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 30px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .time-unit:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
         }
 
         .time-value {
-            font-size: 240px;
+            font-size: 220px;
             font-weight: 800;
             color: #fff;
             text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.5),
-                0 0 40px rgba(255, 107, 0, 0.3),
-                4px 4px 8px rgba(0, 0, 0, 0.8);
+                0 0 30px rgba(255, 255, 255, 0.8),
+                0 0 60px rgba(255, 255, 255, 0.4),
+                0 5px 15px rgba(0, 0, 0, 0.9);
             line-height: 1;
-            min-width: 320px;
+            min-width: 280px;
             text-align: center;
+            letter-spacing: -5px;
         }
 
         .time-label {
-            font-size: 60px;
-            font-weight: 800;
-            color: #fff;
+            font-size: 50px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
-            margin-top: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            letter-spacing: 4px;
+            margin-top: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 6px;
         }
 
         .separator {
-            font-size: 200px;
-            color: #fff;
+            font-size: 180px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.4);
             align-self: center;
             margin-top: -80px;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
         .stars {
             position: absolute;
             width: 100%;
             height: 100%;
+            display: none;
         }
 
         .star {
